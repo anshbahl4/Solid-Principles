@@ -1,0 +1,13 @@
+class Bird {
+    void fly() { System.out.println("Flying..."); }
+}
+
+class Sparrow extends Bird {}
+
+public class LSP {
+    static void makeItFly(Bird b) { b.fly(); }
+
+    public static void main(String[] args) {
+        makeItFly(new Sparrow()); // Valid substitute
+    }
+}
