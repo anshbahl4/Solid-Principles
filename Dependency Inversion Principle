@@ -1,0 +1,17 @@
+interface MsgService { void send(String msg); }
+
+class Email implements MsgService {
+    public void send(String msg) { System.out.println("Email: " + msg); }
+}
+
+class Notifier {
+    MsgService s;
+    Notifier(MsgService s) { this.s = s; }
+    void alert() { s.send("Alert!"); }
+}
+
+public class DIP {
+    public static void main(String[] args) {
+        new Notifier(new Email()).alert();
+    }
+}
