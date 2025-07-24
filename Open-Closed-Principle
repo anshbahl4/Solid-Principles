@@ -1,0 +1,17 @@
+interface Shape { double area(); }
+
+class Circle implements Shape {
+    public double area() { return 3.14 * 4 * 4; }
+}
+
+class Square implements Shape {
+    public double area() { return 5 * 5; }
+}
+
+public class OCP {
+    public static void main(String[] args) {
+        Shape c = new Circle(), s = new Square();
+        System.out.println("Circle: " + c.area());
+        System.out.println("Square: " + s.area());
+    }
+}
