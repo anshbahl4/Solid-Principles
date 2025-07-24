@@ -1,0 +1,12 @@
+interface Printer { void print(); }
+interface Scanner { void scan(); }
+
+class HP implements Printer {
+    public void print() { System.out.println("Printing..."); }
+}
+
+public class ISP {
+    public static void main(String[] args) {
+        new HP().print();
+    }
+}
